@@ -34,13 +34,11 @@
   /* Exibir o menu e alterar aparencia do body */
 
   .menu-open {
-    /* background-color: hsl(0, 0%, 59%);
-    opacity: 0.6; */
+    background-color: hsl(0, 0%, 59%);
+    opacity: 0.6;
   }
 
-  .hide-menu {
-    display: none;
-  }
+ 
 
   /* Desing dentro do menu */
 
@@ -53,6 +51,7 @@
     inset-block-end: 0;
     z-index: 10;
     color: hsl(0, 0%, 41%);
+    display: none;
   }
 
   nav > img {
