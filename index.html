@@ -8,7 +8,7 @@
       name="description"
       content="Challange from frontEnd mentor. Author: Flávio Ferreira"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +19,8 @@
 
     <title>Document</title>
   </head>
-  <body >
-    <header class="menu-open">
+  <body>
+    <header>
       <h1>snap</h1>
       <img
         role="img"
@@ -28,101 +28,102 @@
         alt="icon-menu"
         width="32px"
         height="18px"
-
+        id="menu-icon-open"
       />
     </header>
-      <nav class="hide-menu">
-        <img
-          role="img"
-          src="./src/images/icon-close-menu.svg"
-          alt="icon-close-menu"
-          height="26px"
-          width="26px"
-        />
-        <ul class="list">
-          <li>
-            Features
-            <picture>
-              <!-- <source
+    <nav>
+      <img
+        role="img"
+        src="./src/images/icon-close-menu.svg"
+        alt="icon-close-menu"
+        height="26px"
+        width="26px"
+        id="menu-icon-close"
+      />
+      <ul class="list">
+        <li>
+          Features
+          <picture>
+            <!-- <source
                 srcset="./src/images/icon-arrow-up.svg"
                 type="image/svg" /> -->
 
+            <img
+              role="img"
+              src="./src/images/icon-arrow-down.svg"
+              alt="icon-arrow-down"
+              width="10px"
+              height="6px"
+          /></picture>
+          <ul class="list features-options">
+            <li>
               <img
                 role="img"
-                src="./src/images/icon-arrow-down.svg"
-                alt="icon-arrow-down"
-                width="10px"
-                height="6px"
-            /></picture>
-            <ul class="list features-options">
-              <li>
-                <img
-                  role="img"
-                  src="./src/images/icon-todo.svg"
-                  alt="icon-todo"
-                  width="14px"
-                  height="16px"
-                  class="features-icon"
-                />Todo List
-              </li>
-              <li>
-                <img
-                  role="img"
-                  src="./src/images/icon-calendar.svg"
-                  alt="icon-calendar"
-                  width="14px"
-                  height="16px"
-                  class="features-icon"
-                />Calendar
-              </li>
-              <li>
-                <img
-                  role="img"
-                  src="./src/images/icon-reminders.svg"
-                  alt="icon-reminders"
-                  width="14px"
-                  height="16px"
-                  class="features-icon"
-                />Reminders
-              </li>
-              <li>
-                <img
-                  role="img"
-                  src="./src/images/icon-planning.svg"
-                  alt="icon-planning"
-                  width="14px"
-                  height="16px"
-                  class="features-icon"
-                />Planning
-              </li>
-            </ul>
-          </li>
-          <li>
-            Company<picture>
-              <!-- <source
+                src="./src/images/icon-todo.svg"
+                alt="icon-todo"
+                width="14px"
+                height="16px"
+                class="features-icon"
+              />Todo List
+            </li>
+            <li>
+              <img
+                role="img"
+                src="./src/images/icon-calendar.svg"
+                alt="icon-calendar"
+                width="14px"
+                height="16px"
+                class="features-icon"
+              />Calendar
+            </li>
+            <li>
+              <img
+                role="img"
+                src="./src/images/icon-reminders.svg"
+                alt="icon-reminders"
+                width="14px"
+                height="16px"
+                class="features-icon"
+              />Reminders
+            </li>
+            <li>
+              <img
+                role="img"
+                src="./src/images/icon-planning.svg"
+                alt="icon-planning"
+                width="14px"
+                height="16px"
+                class="features-icon"
+              />Planning
+            </li>
+          </ul>
+        </li>
+        <li>
+          Company<picture>
+            <!-- <source
                 srcset="./src/images/icon-arrow-up.svg"
                 type="image/svg" /> -->
-              <img
-                role="img"
-                src="./src/images/icon-arrow-down.svg"
-                alt="icon-arrow-down"
-                width="10px"
-                height="6px"
-            /></picture>
-            <ul class="list company-options">
-              <li>History</li>
-              <li>Our Team</li>
-              <li>Blog</li>
-            </ul>
-          </li>
-          <li>Careers</li>
-          <li>About</li>
-        </ul>
-        <button role="button">login</button>
-        <button role="button">Register</button>
-      </nav>
+            <img
+              role="img"
+              src="./src/images/icon-arrow-down.svg"
+              alt="icon-arrow-down"
+              width="10px"
+              height="6px"
+          /></picture>
+          <ul class="list company-options">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <button role="button">login</button>
+      <button role="button">Register</button>
+    </nav>
     <!-- </header> -->
-    <main class="menu-open">
+    <main >
       <img
         role="img"
         src="./src/images/hero-mobile"
@@ -130,7 +131,7 @@
         width="455px"
         height="342px"
       />
-      <section >
+      <section>
         <h1>Make remote work</h1>
         <p>
           Get your team in <abbr title="synchronization">sync</abbr> , no matter
@@ -140,7 +141,7 @@
         <button>Learn more</button>
       </section>
     </main>
-    <aside class="menu-open">
+    <aside >
       <ul>
         <li>
           <a href="http://"
