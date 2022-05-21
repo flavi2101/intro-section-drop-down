@@ -2,7 +2,7 @@
 - Medium Gray: hsl(0, 0%, 41%)
 - Almost Black: hsl(0, 0%, 8%) */
 
-@media screen and (max-width: 676px) {
+@media screen and (max-width: 375px) {
   *,
   *::after,
   *::before {
@@ -37,8 +37,6 @@
     background-color: hsl(0, 0%, 59%);
     opacity: 0.6;
   }
-
- 
 
   /* Desing dentro do menu */
 
@@ -85,10 +83,10 @@
   }
 
   .features-options {
-    display: visible;
+    display: none;
   }
   .company-options {
-    display: visible;
+    display: none;
   }
 
   nav > button {
@@ -103,6 +101,7 @@
     border-width: 3px;
     border-color: hsl(0, 0%, 21%);
     border-style: solid;
+    cursor: pointer;
   }
 
   nav > button:nth-child(2n + 1) {
