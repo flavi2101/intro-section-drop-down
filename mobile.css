@@ -1,0 +1,197 @@
+/* - Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%) */
+
+@media screen and (max-width: 676px) {
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+  }
+  html {
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    height: 7%;
+  }
+
+  /* Exibir o menu e alterar aparencia do body */
+
+  .menu-open {
+    /* background-color: hsl(0, 0%, 59%);
+    opacity: 0.6; */
+  }
+
+  .hide-menu {
+    display: none;
+  }
+
+  /* Desing dentro do menu */
+
+  nav {
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    inset-inline-end: 0;
+    inset-inline-start: 39%;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    z-index: 10;
+    color: hsl(0, 0%, 41%);
+  }
+
+  nav > img {
+    display: block;
+    margin: 16px 16px 16px auto;
+  }
+
+  nav picture > img {
+    padding-inline-start: 8px;
+    width: 16px;
+    height: 8px;
+  }
+
+  .list {
+    list-style-type: none;
+    padding-inline-start: 24px;
+    font-size: 1.2rem;
+  }
+
+  .list > li {
+    padding-block-end: 20px;
+  }
+
+  .list > li:nth-child(4n + 1) {
+    padding-block-start: 20px;
+  }
+
+  .features-icon {
+    padding-inline-end: 8px;
+    width: inherit;
+  }
+
+  .features-options {
+    display: visible;
+  }
+  .company-options {
+    display: visible;
+  }
+
+  nav > button {
+    display: block;
+    width: 70%;
+    margin-inline: auto;
+    background-color: hsl(0, 0%, 98%);
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 16px;
+    color: hsl(0, 0%, 41%);
+    border-width: 3px;
+    border-color: hsl(0, 0%, 21%);
+    border-style: solid;
+  }
+
+  nav > button:nth-child(2n + 1) {
+    border: none;
+    margin-block-end: 8px;
+  }
+
+  /* Desing da tela principal */
+  main {
+    height: 80%;
+  }
+
+  main > img {
+    padding-block-start: 8px;
+    width: 100%;
+    height: 52%;
+    z-index: 5;
+  }
+
+  main > section {
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  section h1 {
+    font-size: 1.92rem;
+    text-align: center;
+    margin: 0;
+    padding-block-start: 32px;
+    padding-block-end: 24px;
+  }
+
+  section p {
+    text-align: center;
+    line-height: 1.5;
+    margin-block-start: 0;
+    padding-inline: 8px;
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 41%);
+  }
+
+  p > * {
+    font-weight: initial;
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  section > button {
+    text-align: center;
+    width: 40%;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    padding: 16px;
+    border-radius: 16px;
+    border: none;
+    font-size: 0.9rem;
+  }
+
+  section > button:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+    font-weight: 600;
+  }
+  /* Desgin dos clientes */
+
+  aside {
+    height: 13%;
+  }
+
+  aside ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-block-end: 0;
+    margin-block-start: 26px;
+    align-content: flex-end;
+  }
+
+  aside ul img {
+    width: 85%;
+    height: 95%;
+  }
+}
