@@ -1,4 +1,4 @@
-[![NPM](https://github.com/flavi2101/intro-section-drop-down/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/flavi2101/intro-section-drop-down/blob/master/LICENSE) 
 
 ## Sobre o projeto
 
