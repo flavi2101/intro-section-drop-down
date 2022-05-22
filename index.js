@@ -1,13 +1,17 @@
 const openMenuIcon = document.getElementById("menu-icon-open");
 const bodyElement = document.querySelector("body");
 const closeMenuIcon = document.getElementById("menu-icon-close");
-const openFeatures = document.getElementById("icon-arrow");
-const openCompany = document.getElementById('icon-arrow2')
+const openFeatures = document.getElementById("icon-arrow1");
+const openCompany = document.getElementById("icon-arrow2");
 
 openMenuIcon.addEventListener("click", menuHandler);
 closeMenuIcon.addEventListener("click", menuHandler);
-openFeatures.addEventListener("click", ()=>featuresHandler(".features-options"));
-openCompany.addEventListener("click", ()=> featuresHandler(".company-options"));
+openFeatures.addEventListener("click", (e) =>
+  featuresHandler(".features-options", e)
+);
+openCompany.addEventListener("click", (e) =>
+  featuresHandler(".company-options", e)
+);
 
 function menuHandler() {
   let navElement = document.querySelector("nav");
@@ -33,7 +37,7 @@ function handleWithMenuOpenClass(nodes, displayValue) {
   }
 }
 
-function featuresHandler(classString) {
+function featuresHandler(classString, event) {
   let featureOptions = document.querySelector(classString);
   let displayValue =
     window.getComputedStyle(featureOptions).getPropertyValue("display") ==
@@ -44,8 +48,8 @@ function featuresHandler(classString) {
   featureOptions.style.display = displayValue;
 
   if (displayValue == "block") {
-    openFeatures.setAttribute("src", "./src/images/icon-arrow-up.svg");
+    event.target.setAttribute("src", "./src/images/icon-arrow-up.svg");
   } else {
-    openFeatures.setAttribute("src", "./src/images/icon-arrow-down.svg");
+    event.target.setAttribute("src", "./src/images/icon-arrow-down.svg");
   }
 }

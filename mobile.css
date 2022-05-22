@@ -1,8 +1,6 @@
-/* - Almost White: hsl(0, 0%, 98%)
-- Medium Gray: hsl(0, 0%, 41%)
-- Almost Black: hsl(0, 0%, 8%) */
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 376px) {
   *,
   *::after,
   *::before {
@@ -66,15 +64,17 @@
   .list {
     list-style-type: none;
     padding-inline-start: 24px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    margin-block: 0;
+
   }
 
   .list > li {
-    padding-block-end: 20px;
+    padding-block-end: 18px;
   }
 
   .list > li:nth-child(4n + 1) {
-    padding-block-start: 20px;
+    padding-block-start: 16px;
   }
 
   .features-icon {
@@ -94,12 +94,12 @@
     width: 70%;
     margin-inline: auto;
     background-color: hsl(0, 0%, 98%);
-    padding: 12px;
+    padding: 10px;
     font-size: 1rem;
     border-radius: 16px;
     color: hsl(0, 0%, 41%);
-    border-width: 3px;
-    border-color: hsl(0, 0%, 21%);
+    border-width: 2px;
+    border-color: hsl(0, 0%, 42%);
     border-style: solid;
     cursor: pointer;
   }
