@@ -3,7 +3,7 @@ const bodyElement = document.querySelector("body");
 const closeMenuIcon = document.getElementById("menu-icon-close");
 const openFeatures = document.getElementById("icon-arrow1");
 const openCompany = document.getElementById("icon-arrow2");
-const wmm = window.matchMedia("(min-width: 426px) and (max-width: 1025px)");
+const wmm = window.matchMedia("(min-width: 426px)");
 const hero = document.querySelector("main img");
 const sect = document.querySelector("section");
 
