@@ -1,4 +1,4 @@
-@media screen and (max-width: 426px) {
+@media screen and (min-width: 426px) and (max-width: 1025px) {
   *,
   *::after,
   *::before {
@@ -7,16 +7,17 @@
   }
   html {
     font-size: 18px;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
   }
 
   body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: hsl(0, 0%, 98%);
   }
 
   header {
@@ -24,76 +25,99 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 16px;
-    height: 7%;
+    block-size: 10%;
   }
 
-  /* Exibir o menu e alterar aparencia do body */
+  header h1 {
+    padding-inline-start: 8px;
+    padding-block-start: 8px;
+  }
 
-  .menu-open {
-    background-color: hsl(0, 0%, 59%);
-    opacity: 0.6;
+  header img {
+    display: none;
   }
 
   /* Desing dentro do menu */
 
   nav {
-    background-color: hsl(0, 0%, 98%);
-    position: absolute;
-    inset-inline-end: 0;
-    inset-inline-start: 39%;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    z-index: 10;
     color: hsl(0, 0%, 41%);
-    display: none;
+    position: absolute;
+    inset-inline-start: 15%;
+    inset-inline-end: 2%;
+    inset-block-start: 3%;
+    display: flex;
+    align-items: baseline;
+    font-size: 0.8rem;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-grow: 2;
   }
 
   nav > img {
-    display: block;
-    margin: 16px 16px 16px auto;
+    display: none;
   }
 
   nav picture > img {
     padding-inline-start: 8px;
-    width: 16px;
-    height: 8px;
+    inline-size: 16px;
+    block-size: 8px;
   }
 
   .list {
     list-style-type: none;
-    padding-inline-start: 24px;
-    font-size: 1.0rem;
     margin-block: 0;
-
+    padding-inline-start: 8px;
   }
 
   .list > li {
-    padding-block-end: 18px;
+    padding-inline-end: 32px;
+    padding-block-end: 12px;
+  }
+  picture + ul li:hover, .main-option:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+    cursor: pointer;
   }
 
-  .list > li:nth-child(4n + 1) {
-    padding-block-start: 16px;
+  .list li:nth-of-type(4n + 0) {
+    padding-inline-end: 0;
   }
 
   .features-icon {
     padding-inline-end: 8px;
-    width: inherit;
+    inline-size: inherit;
   }
 
   .features-options {
     display: none;
+    inset-inline-start: -4%;
+    inset-block-start: 100%;
   }
+
   .company-options {
     display: none;
+    inset-block-start: 100%;
+  }
+
+  .drop-options {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    padding-block: 8px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 63%);
+  }
+
+  .drop-options li {
+    padding-inline: 12px;
   }
 
   nav > button {
     display: block;
-    width: 70%;
-    margin-inline: auto;
     background-color: hsl(0, 0%, 98%);
-    padding: 10px;
-    font-size: 1rem;
+    padding: 8px 12px;
+    font-size: 0.8rem;
     border-radius: 16px;
     color: hsl(0, 0%, 41%);
     border-width: 2px;
@@ -104,44 +128,45 @@
 
   nav > button:nth-child(2n + 1) {
     border: none;
-    margin-block-end: 8px;
+    margin-inline-end: 24px;
   }
 
   /* Desing da tela principal */
   main {
-    height: 80%;
-  }
-
-  main > img {
-    padding-block-start: 8px;
-    width: 100%;
-    height: 52%;
-    z-index: 5;
-  }
-
-  main > section {
-    height: 48%;
+    block-size: 70%;
+    inline-size: 80%;
+    margin-inline: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row-reverse;
     align-items: center;
   }
 
+  main > img {
+    inline-size: 90%;
+    block-size: 100%;
+  }
+
+  main > section {
+    block-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   section h1 {
-    font-size: 1.92rem;
-    text-align: center;
+    font-size: 3rem;
     margin: 0;
-    padding-block-start: 32px;
+    padding-block-start: 56px;
     padding-block-end: 24px;
   }
 
   section p {
-    text-align: center;
-    line-height: 1.5;
+    line-height: 1.4;
     margin-block-start: 0;
-    padding-inline: 8px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: hsl(0, 0%, 41%);
+    padding-inline-end: 72px;
   }
 
   p > * {
@@ -152,13 +177,14 @@
 
   section > button {
     text-align: center;
-    width: 40%;
+    width: 35%;
     color: hsl(0, 0%, 98%);
     background-color: hsl(0, 0%, 8%);
-    padding: 16px;
+    padding: 12px 16px;
     border-radius: 16px;
     border: none;
     font-size: 0.9rem;
+    border: 2px solid hsl(0, 0%, 8%);
   }
 
   section > button:hover {
@@ -171,6 +197,10 @@
 
   aside {
     height: 13%;
+    position: absolute;
+    inset-inline-start: 9%;
+    inset-inline-end: 53%;
+    inset-block-end: 15%;
   }
 
   aside ul {

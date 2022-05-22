@@ -3,6 +3,9 @@ const bodyElement = document.querySelector("body");
 const closeMenuIcon = document.getElementById("menu-icon-close");
 const openFeatures = document.getElementById("icon-arrow1");
 const openCompany = document.getElementById("icon-arrow2");
+const wmm = window.matchMedia("(min-width: 426px) and (max-width: 1025px)");
+const hero = document.querySelector("main img");
+const sect = document.querySelector("section");
 
 openMenuIcon.addEventListener("click", menuHandler);
 closeMenuIcon.addEventListener("click", menuHandler);
@@ -12,6 +15,15 @@ openFeatures.addEventListener("click", (e) =>
 openCompany.addEventListener("click", (e) =>
   featuresHandler(".company-options", e)
 );
+
+if (wmm.matches) {
+  hero.setAttribute("src", "./src/images/hero-desktop");
+  let newTitle = document.createElement('h1')
+  newTitle.innerHTML = 'Make<br>remote work'
+  let title = document.querySelector('section h1')
+   sect.replaceChild(newTitle,title)
+
+}
 
 function menuHandler() {
   let navElement = document.querySelector("nav");
