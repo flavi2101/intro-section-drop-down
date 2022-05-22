@@ -159,6 +159,7 @@
     border-radius: 16px;
     border: none;
     font-size: 0.9rem;
+    border: 2px solid hsl(0, 0%, 8%);
   }
 
   section > button:hover {
